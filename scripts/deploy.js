@@ -1,11 +1,10 @@
 const { ethers } = require('hardhat');
 
-module.exports = async () => {
-    const LockFactory = await ethers.getContractFactory('Lock');
-    const Lock = await LockFactory.deploy();
-    await Lock.waitForDeployment();
-    console.log(LockFactory);
+const main = async () => {
+    // Deploying MarketPlace Contract..
+    const MarketPlaceFactory = await ethers.getContractFactory('MarketPlace');
+    const MarketPlace = await MarketPlaceFactory.deploy(23987,);
+    await MarketPlace.waitForDeployment();
 }
 
-
-module.exports.tags = ['all', 'Lock'];
+main();
