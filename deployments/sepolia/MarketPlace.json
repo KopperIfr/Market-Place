@@ -1,0 +1,82 @@
+{
+  "address": "0xf0a2493a6924afdB2E352B5AD815bdfE4e61bbb9",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_numb",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "getNumb",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x7f8eb3e5372bb99738f61089ac03343d270085787167cff26beac283c9585d23",
+  "receipt": {
+    "to": null,
+    "from": "0x006fD5b352027232035a437C51C64b16339B092D",
+    "contractAddress": "0xf0a2493a6924afdB2E352B5AD815bdfE4e61bbb9",
+    "transactionIndex": 50,
+    "gasUsed": "117604",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x7c0c812f3aef2a88d29213031ed138ee342313d56d7560794ffd24dc633f08ab",
+    "transactionHash": "0x7f8eb3e5372bb99738f61089ac03343d270085787167cff26beac283c9585d23",
+    "logs": [],
+    "blockNumber": 6862062,
+    "cumulativeGasUsed": "12882983",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    267
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "c7aea8e1c0df0b06ea7eed179c58d795",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.27+commit.40a35a09\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_numb\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"getNumb\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/MarketPlace.sol\":\"MarketPlace\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/MarketPlace.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0;\\n\\n\\ncontract MarketPlace {\\n\\n    uint256 numb = 12;\\n\\n    constructor(uint256 _numb) {\\n        numb = _numb;\\n    }\\n\\n    function getNumb() public view returns(uint256) {\\n        return numb;\\n    }\\n\\n\\n}\",\"keccak256\":\"0x78e3b0cb81216eade4c24e922ccb05a4e0b54d538fcf87cb341e741a3f5f4cb8\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x6080604052600c600055348015601457600080fd5b506040516101623803806101628339818101604052810190603491906076565b8060008190555050609e565b600080fd5b6000819050919050565b6056816045565b8114606057600080fd5b50565b600081519050607081604f565b92915050565b60006020828403121560895760886040565b5b60006095848285016063565b91505092915050565b60b6806100ac6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806318892ad914602d575b600080fd5b60336047565b604051603e91906067565b60405180910390f35b60008054905090565b6000819050919050565b6061816050565b82525050565b6000602082019050607a6000830184605a565b9291505056fea2646970667358221220e56cab05cf3394e014728f73e386482cb233bb62c90cb647eb7123caf6b06f8b64736f6c634300081b0033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c806318892ad914602d575b600080fd5b60336047565b604051603e91906067565b60405180910390f35b60008054905090565b6000819050919050565b6061816050565b82525050565b6000602082019050607a6000830184605a565b9291505056fea2646970667358221220e56cab05cf3394e014728f73e386482cb233bb62c90cb647eb7123caf6b06f8b64736f6c634300081b0033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 4,
+        "contract": "contracts/MarketPlace.sol:MarketPlace",
+        "label": "numb",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

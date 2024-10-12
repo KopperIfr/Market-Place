@@ -1,19 +1,31 @@
-const { ethers } = require('hardhat');
+const { deployments, getNamedAccounts, run } = require('hardhat');
+const { verify } = require('../hardhat-config-helper.js');
 
 const main = async () => {
 
-    // Deploying MarketPlace Contract..
-    const MarketPlaceFactory = await ethers.getContractFactory('MarketPlace');
-    const MarketPlace = await MarketPlaceFactory.deploy(23987);
-    await MarketPlace.waitForDeployment();
+    // Getting deploy function..
+    const { deploy, log } = deployments;
 
-    // Returning contract address..
-    return MarketPlace.target;
+    // Getting wallet address..
+    const { deployer } = await getNamedAccounts();
+
+    // Deploying Contract..
+    const MarketPlace = await deploy('MarketPlace', {
+        from: deployer,
+        args: [267],
+        log: true
+    });
+
+    // Verifying contract on etherscan..
+    verify(MarketPlace.address, [267])
+
+    // Returning contract..
+    return MarketPlace.address;
 }
 
 main()
 .then((res) => {
-    console.log(res);
+    console.log(`MarketPlace address: ${res}`);
 })
 .catch((err) => {
     console.log(err);

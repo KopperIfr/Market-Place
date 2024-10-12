@@ -4,7 +4,7 @@
   "description": "Market-Place",
   "main": "index.js",
   "scripts": {
-    "script": "npx hardhat compile && npx hardhat run ./scripts/deploy2.js --network"
+    "script": "npx hardhat compile && npx hardhat run ./scripts/deploy.js --network"
   },
   "keywords": [],
   "author": "",
