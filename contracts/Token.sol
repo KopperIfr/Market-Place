@@ -17,7 +17,7 @@ contract Token is ERC20, AccessControl {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender); // Asigna el rol de administrador al creador
         _grantRole(MINTER_ROLE, msg.sender); // Asigna el rol de emisor al creador
         maxSupply = _maxSupply;                      // Set the maximum supply
-        _mint(msg.sender, 100000 * (10 ** uint256(decimals()))); // Emisión inicial 100.000
+        _mint(msg.sender, 1000000 * (10 ** uint256(decimals()))); // Emisión inicial 100.000
     }
 
     function mint(uint256 amount) public {
@@ -42,4 +42,7 @@ contract Token is ERC20, AccessControl {
         _burn(account, amount);
     }
 
+    function totalSupply() public override view returns (uint256) {
+        return super.totalSupply() / 1e18;
+    }
 }

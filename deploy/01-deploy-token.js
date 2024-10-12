@@ -1,4 +1,5 @@
 const { TOTAL_SUPPLY } = require('../hardhat-config-helper.js');
+const { ethers } = require('hardhat');
 
 module.exports = async({ getNamedAccounts, deployments }) => {
     const { deploy } = deployments;
@@ -8,11 +9,17 @@ module.exports = async({ getNamedAccounts, deployments }) => {
 
     const Token = await deploy('Token', {
         from: deployer,
-        args: [TOTAL_SUPPLY, 'SPRINT', 'SPT'],
+        args: 
+        [
+            ethers.parseUnits("10", 18), 
+            'SPRINT', 
+            'SPT'
+        ],
         log: true
     })
 
     console.log('Token deployed!');
+
     const TokenContract = await ethers.getContractAt('Token', Token.address);
     const name = await TokenContract.name();
     const symbol = await TokenContract.symbol();

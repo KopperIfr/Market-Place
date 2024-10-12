@@ -2,7 +2,7 @@ const { network, run, ethers } = require('hardhat');
 
 const LOCAL_BLOCKCHAIN = ['localhost', 'hardhat'];
 
-const TOKEN_TOTAL_SUPPLY = ethers.parseUnits("1000000", 18);
+const TOKEN_TOTAL_SUPPLY = ethers.parseEther("1000000", 18);
 
 const verify = async (contractAddress, args) => {
     if(!LOCAL_BLOCKCHAIN.includes(network.name)) {
