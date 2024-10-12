@@ -6,6 +6,14 @@ const main = async () => {
     const MarketPlaceFactory = await ethers.getContractFactory('MarketPlace');
     const MarketPlace = await MarketPlaceFactory.deploy(23987,);
     await MarketPlace.waitForDeployment();
+
+    return {MarketPlace}
 }
 
-main();
+main()
+.then((res) => {
+    console.log(res);
+})
+.catch((err) => {
+    console.log(err);
+})
