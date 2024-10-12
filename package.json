@@ -4,21 +4,20 @@
   "description": "Market-Place",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KopperIfr/Market-Place.git"
+    "compile": "npx hardhat compile",
+    "clean": "npx hardhat clean",
+    "script": "npx hardhat clean && npx hardhat compile && npx hardhat run ./scripts/deploy.js --network",
+    "dev": "npx hardhat node"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KopperIfr/Market-Place/issues"
-  },
-  "homepage": "https://github.com/KopperIfr/Market-Place#readme",
   "devDependencies": {
+    "@babel/core": "^7.25.8",
+    "@babel/preset-env": "^7.25.8",
+    "@babel/register": "^7.25.7",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "hardhat": "^2.22.13"
+    "hardhat": "^2.22.13",
+    "hardhat-deploy": "^0.13.0"
   }
 }
