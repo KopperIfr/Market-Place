@@ -1,4 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
+require('hardhat-deploy');
+require('hardhat-deploy-ethers');
+require('@nomiclabs/hardhat-ethers');
 require('dotenv').config()
 
 /** @type import('hardhat/config').HardhatUserConfig */
@@ -22,7 +25,7 @@ module.exports = {
   },
   namedAccounts: {
     deployer: {
-      default: 3
+      default: 0
     }
   },
   etherscan: {
@@ -30,5 +33,8 @@ module.exports = {
     apiKey: {
       sepolia: process.env.ETHERSCAN_API_KEY
     }
+  },
+  sourcify: {
+    enabled: true
   }
 };

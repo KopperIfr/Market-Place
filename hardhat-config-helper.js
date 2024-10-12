@@ -1,7 +1,24 @@
-const { run, network } = require('hardhat');
 
-const verify = async (contractAddress, args) => {
-    if(network.config.chainId === 12333) {
+const LOCAL_BLOCKCHAIN = ['localhost', 'hardhat'];
 
+
+const verify = async (run, contractAddress, args) => {
+    console.log("Verifying contract...")
+    try {
+        await run("verify:verify", {
+        address: contractAddress,
+        constructorArguments: args,
+        })
+    } catch (e) {
+        if (e.message.toLowerCase().includes("already verified")) {
+        console.log("Already Verified!")
+        } else {
+        console.log(e)
+        }
     }
+}
+
+module.exports = {
+    LOCAL_BLOCKCHAIN,
+    verify
 }

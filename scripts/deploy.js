@@ -1,14 +1,13 @@
-const { ethers, network } = require('hardhat');
+const { ethers } = require('hardhat');
 
 const main = async () => {
 
-    console.log(network.config.chainId);
-    
     // Deploying MarketPlace Contract..
     const MarketPlaceFactory = await ethers.getContractFactory('MarketPlace');
-    const MarketPlace = await MarketPlaceFactory.deploy(23987,);
+    const MarketPlace = await MarketPlaceFactory.deploy(23987);
     await MarketPlace.waitForDeployment();
 
+    // Returning contract address..
     return MarketPlace.target;
 }
 
