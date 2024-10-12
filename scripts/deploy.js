@@ -1,9 +1,8 @@
-const { ethers } = require('hardhat');
-const helper = require('@nomicfoundation/hardhat-toolbox/src/network-helpers');
+const { ethers, network } = require('hardhat');
 
 const main = async () => {
 
-    console.log(helper);
+    console.log(network.config.chainId);
     
     // Deploying MarketPlace Contract..
     const MarketPlaceFactory = await ethers.getContractFactory('MarketPlace');
