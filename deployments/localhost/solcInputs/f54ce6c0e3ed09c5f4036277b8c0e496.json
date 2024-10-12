@@ -1,0 +1,36 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/MarketPlace.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity >=0.8.0;\n\ncontract MarketPlace {\n\n    uint256 numb;\n\n    function setNumb(uint256 _numb) public {\n        numb = _numb;\n    }\n\n    function getNumb() public view returns(uint256) {\n        return numb;\n    }\n}\n\n\n\n\n// module.exports = async({getNamedAccounts, deployments}) => {\n//     const { deploy } = deployments;\n//     const { deployer } = await getNamedAccounts();\n\n//     const MarketPlace = await deploy('MarketPlace', {\n//         from: deployer,\n//         args: [],\n//         log: true\n//     })\n\n//     let tx = await MarketPlace.getNumb();\n// }\n\n\n// module.exports.tags = ['all', 'MarketPlace'];"
+    }
+  },
+  "settings": {
+    "evmVersion": "paris",
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}

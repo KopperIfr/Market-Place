@@ -1,5 +1,6 @@
-const { deployments, getNamedAccounts, run } = require('hardhat');
+const { deployments, getNamedAccounts, ethers } = require('hardhat');
 const { verify } = require('../hardhat-config-helper.js');
+const { parseEther } = ethers;
 
 const main = async () => {
     // Getting deploy function..
@@ -9,25 +10,24 @@ const main = async () => {
     const { deployer } = await getNamedAccounts();
 
     // Deploying Contract..
-    const MarketPlace = await deploy('MarketPlace', {
+    const CafeToken = await deploy('CafeToken', {
         from: deployer,
         args: [],
         log: true
     });
 
-    // let tx = await MarketPlace.setNumb(22);
-    // tx.wait(1);
-    //console.log(MarketPlace);
     // Verifying contract on etherscan..
-    verify(MarketPlace.address, [])
+    verify(CafeToken.address, [])
+
+    console.log(CafeToken);
 
     // Returning contract..
-    return MarketPlace.address;
+    return CafeToken.address;
 }
 
 main()
 .then((res) => {
-    console.log(`MarketPlace address: ${res}`);
+    console.log(`CafeToken address: ${res}`);
     return res;
 })
 .catch((err) => {

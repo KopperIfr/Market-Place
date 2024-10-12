@@ -1,6 +1,8 @@
-const { network, run } = require('hardhat');
+const { network, run, ethers } = require('hardhat');
 
 const LOCAL_BLOCKCHAIN = ['localhost', 'hardhat'];
+
+const TOKEN_TOTAL_SUPPLY = ethers.parseUnits("1000000", 18);
 
 const verify = async (contractAddress, args) => {
     if(!LOCAL_BLOCKCHAIN.includes(network.name)) {
@@ -21,5 +23,7 @@ const verify = async (contractAddress, args) => {
 }
 
 module.exports = {
-    verify
+    verify,
+    LOCAL_BLOCKCHAIN,
+    TOKEN_TOTAL_SUPPLY
 }

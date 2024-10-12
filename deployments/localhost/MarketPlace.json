@@ -1,17 +1,6 @@
 {
-  "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+  "address": "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707",
   "abi": [
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "_numb",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
     {
       "inputs": [],
       "name": "getNumb",
@@ -24,32 +13,43 @@
       ],
       "stateMutability": "view",
       "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_numb",
+          "type": "uint256"
+        }
+      ],
+      "name": "setNumb",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
     }
   ],
-  "transactionHash": "0x4508f977b904648dcf8a2f3e06e8a3d96ab346de468e21c580d0031fe8f86842",
+  "transactionHash": "0xa993f904d041d94ef97f650f3f98fe5446bc8b95bb83fea9cd44332721de8741",
   "receipt": {
     "to": null,
     "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
-    "contractAddress": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+    "contractAddress": "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707",
     "transactionIndex": 0,
-    "gasUsed": "117604",
+    "gasUsed": "125697",
     "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-    "blockHash": "0xd1dded7dccb7616b6c99c03a672aa2aaf884d3c500dcccde6069c13aa5747421",
-    "transactionHash": "0x4508f977b904648dcf8a2f3e06e8a3d96ab346de468e21c580d0031fe8f86842",
+    "blockHash": "0xb4689baa9adeb57af0ee18d64ddcffcb777337bd7195eeda15280ecff6add675",
+    "transactionHash": "0xa993f904d041d94ef97f650f3f98fe5446bc8b95bb83fea9cd44332721de8741",
     "logs": [],
-    "blockNumber": 2,
-    "cumulativeGasUsed": "117604",
+    "blockNumber": 6,
+    "cumulativeGasUsed": "125697",
     "status": 1,
     "byzantium": true
   },
-  "args": [
-    267
-  ],
-  "numDeployments": 1,
-  "solcInputHash": "c7aea8e1c0df0b06ea7eed179c58d795",
-  "metadata": "{\"compiler\":{\"version\":\"0.8.27+commit.40a35a09\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_numb\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"getNumb\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/MarketPlace.sol\":\"MarketPlace\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/MarketPlace.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0;\\n\\n\\ncontract MarketPlace {\\n\\n    uint256 numb = 12;\\n\\n    constructor(uint256 _numb) {\\n        numb = _numb;\\n    }\\n\\n    function getNumb() public view returns(uint256) {\\n        return numb;\\n    }\\n\\n\\n}\",\"keccak256\":\"0x78e3b0cb81216eade4c24e922ccb05a4e0b54d538fcf87cb341e741a3f5f4cb8\",\"license\":\"MIT\"}},\"version\":1}",
-  "bytecode": "0x6080604052600c600055348015601457600080fd5b506040516101623803806101628339818101604052810190603491906076565b8060008190555050609e565b600080fd5b6000819050919050565b6056816045565b8114606057600080fd5b50565b600081519050607081604f565b92915050565b60006020828403121560895760886040565b5b60006095848285016063565b91505092915050565b60b6806100ac6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806318892ad914602d575b600080fd5b60336047565b604051603e91906067565b60405180910390f35b60008054905090565b6000819050919050565b6061816050565b82525050565b6000602082019050607a6000830184605a565b9291505056fea2646970667358221220e56cab05cf3394e014728f73e386482cb233bb62c90cb647eb7123caf6b06f8b64736f6c634300081b0033",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c806318892ad914602d575b600080fd5b60336047565b604051603e91906067565b60405180910390f35b60008054905090565b6000819050919050565b6061816050565b82525050565b6000602082019050607a6000830184605a565b9291505056fea2646970667358221220e56cab05cf3394e014728f73e386482cb233bb62c90cb647eb7123caf6b06f8b64736f6c634300081b0033",
+  "args": [],
+  "numDeployments": 4,
+  "solcInputHash": "f54ce6c0e3ed09c5f4036277b8c0e496",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.27+commit.40a35a09\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getNumb\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_numb\",\"type\":\"uint256\"}],\"name\":\"setNumb\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/MarketPlace.sol\":\"MarketPlace\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/MarketPlace.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0;\\n\\ncontract MarketPlace {\\n\\n    uint256 numb;\\n\\n    function setNumb(uint256 _numb) public {\\n        numb = _numb;\\n    }\\n\\n    function getNumb() public view returns(uint256) {\\n        return numb;\\n    }\\n}\\n\\n\\n\\n\\n// module.exports = async({getNamedAccounts, deployments}) => {\\n//     const { deploy } = deployments;\\n//     const { deployer } = await getNamedAccounts();\\n\\n//     const MarketPlace = await deploy('MarketPlace', {\\n//         from: deployer,\\n//         args: [],\\n//         log: true\\n//     })\\n\\n//     let tx = await MarketPlace.getNumb();\\n// }\\n\\n\\n// module.exports.tags = ['all', 'MarketPlace'];\",\"keccak256\":\"0x7d9c2a409e23d12396461049a8e8f740f4bf5ac8fe523144de5193863d761c39\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b506101508061001f6000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c806318892ad91461003b578063fc7a8d8c14610059575b600080fd5b610043610075565b60405161005091906100a1565b60405180910390f35b610073600480360381019061006e91906100ed565b61007e565b005b60008054905090565b8060008190555050565b6000819050919050565b61009b81610088565b82525050565b60006020820190506100b66000830184610092565b92915050565b600080fd5b6100ca81610088565b81146100d557600080fd5b50565b6000813590506100e7816100c1565b92915050565b600060208284031215610103576101026100bc565b5b6000610111848285016100d8565b9150509291505056fea26469706673582212206937f3a87265b778a86f66a5769f6aeaeec84d4d3be1c36ab842c6e3cf77510c64736f6c634300081b0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c806318892ad91461003b578063fc7a8d8c14610059575b600080fd5b610043610075565b60405161005091906100a1565b60405180910390f35b610073600480360381019061006e91906100ed565b61007e565b005b60008054905090565b8060008190555050565b6000819050919050565b61009b81610088565b82525050565b60006020820190506100b66000830184610092565b92915050565b600080fd5b6100ca81610088565b81146100d557600080fd5b50565b6000813590506100e7816100c1565b92915050565b600060208284031215610103576101026100bc565b5b6000610111848285016100d8565b9150509291505056fea26469706673582212206937f3a87265b778a86f66a5769f6aeaeec84d4d3be1c36ab842c6e3cf77510c64736f6c634300081b0033",
   "devdoc": {
     "kind": "dev",
     "methods": {},
@@ -63,7 +63,7 @@
   "storageLayout": {
     "storage": [
       {
-        "astId": 4,
+        "astId": 3,
         "contract": "contracts/MarketPlace.sol:MarketPlace",
         "label": "numb",
         "offset": 0,
