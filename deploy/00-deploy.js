@@ -6,7 +6,7 @@ module.exports = async({ getNamedAccounts, deployments }) => {
 
     console.log('Deploying Marketplace..');
 
-    const MarketPlace = await deploy('MarketPlace', {
+    const MarketPlace = await deploy('Marketplace', {
         from: deployer,
         args: [],
         log: true
